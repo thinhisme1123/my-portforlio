@@ -1,0 +1,58 @@
+.contact-seciton-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+.contact-infor-container {
+    width: 360px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.contact-infor-item {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.contact-item-icon {
+    color: var(--first-color);
+    font-size: 2rem;
+    margin-right: .75rem;
+}
+.contact-item-text {
+    display: block;
+    text-align: left;
+}
+.contact-item-text h5{
+    color: var(--second-color);
+}
+.contact-item-text p{
+    font-size: 1rem;
+    color: var(--second-color);
+}
+/* form contact */
+.contact-form-input {
+    width: 100%;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi);
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1.5px solid var(--second-color);
+    outline: none;
+    margin-bottom: var(--mb-4);
+    background-color: white;
+    color: black;
+    font-size: 1.1rem;
+}
+.contact-form-input::placeholder {
+    font-size: 1.1rem;
+}
+.contact-form-btn {
+    text-align: right;
+}
+.custom-toast {
+    margin-top: 20%; /* Adjust the margin as needed */
+}

@@ -1,0 +1,29 @@
+.button-link {
+    background-color: #4070f4;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    padding: 15px 50px;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+a:hover { 
+    color: white;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
+}
+button:hover {
+    color: white;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
+}
+
+@media (max-width: 767.98px) { 
+    .button-link {
+        padding: .75rem 2.5rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+}
+

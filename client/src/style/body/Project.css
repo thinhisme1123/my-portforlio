@@ -1,0 +1,68 @@
+.project-section-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.hrdark {
+    border-bottom: 2px dotted #343434;
+}
+.project-item-link {
+    text-decoration: none;
+}
+.project-item-link:hover {
+    opacity: 0.8;
+    background-color: #222222;
+}
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5rem 0;
+}
+.project-item-left {
+    text-align: left;
+}
+.project-item-repoName {
+    color: black;
+}
+.project-item-infor {
+    display: flex;
+    gap: 10px;
+}
+.project-techuse {
+    color: var(--first-color);
+    border: 1px solid var(--first-color);
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+.project-updatetime {
+    background-color: var(--first-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.project-item-right {
+    align-self: center;
+    color: var(--second-color);
+}
+@media (max-width: 767.98px) { 
+    .project-section-container {
+        width: calc(100% - 4rem);
+    }
+
+    .project-techuse {
+       padding: 0px 5px;
+    }
+    .project-updatetime {
+        padding: 3px 8px;
+    }
+}
+
+
+

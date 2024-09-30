@@ -1,0 +1,126 @@
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+}
+.header-name {
+    height: 100%;
+    display: flex;
+
+}
+
+.header-name h3 {
+    color: #0e2431;
+    margin: auto;
+    font-weight:700;
+    font-size: 18px;
+    margin-left: 10px;
+    font-family: var(--body-font);
+}
+.header-secitons {
+    display: flex;
+}
+.header-section-hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.sections-container {
+    display: flex;
+    list-style: none;
+    margin: auto;
+}
+
+.sections-container .section-item {
+    margin-left: 50px;
+}
+
+.sections-container .section-link {
+    text-decoration: none;
+    font-size: 18px;
+    color: #0e2431;
+    font-weight: 600;
+    position: relative;
+}
+.section-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    background-color: #4070f4;
+}
+.section-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    background-color: #4070f4;
+    transform: scaleX(0);
+    transition: transform .5s ease-in-out;
+    
+}
+
+.section-link:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.section-item.active .section-link::after {
+    width: 100%;
+}
+
+
+@media (max-width: 767.98px) { 
+    .header-container {
+        height: 50px;
+    }
+    .header-section-hamburger {
+        display: flex;
+        position: relative;
+        right: 20px;
+        top: 10px;
+        font-size: 20px;
+    }
+    .header-secitons {
+        position: absolute;
+        right: 0;
+        top: 50px;
+        background-color: var(--second-color);
+        height: 100vh;
+        width: 80%;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.5s ease-in-out;
+    }
+    .header-secitons.open {
+        transform: translateX(0);
+        display: block;
+        opacity: 1;
+    }
+    .sections-container {
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        margin-top: 30px;
+
+    }
+    
+    .sections-container .section-item {
+        margin-left: 0px;
+        margin-bottom: 30px;
+    }
+    
+    .sections-container .section-link {
+        font-size: 18px;
+        color: white;
+        font-weight: 600;
+    }
+}

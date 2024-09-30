@@ -1,0 +1,67 @@
+.contact-seciton-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.contact-infor {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.contact-infor-text {
+    width: 50%;
+}
+.contact-infor-text h3{
+    color: #0e2431;
+    font-weight: 700;
+
+}
+.contact-infor-text p{
+    color: #0e2431;
+    text-align: left;
+}
+.contact-infor-dowloandCV {
+    margin-top: 3rem;
+}
+.contact-infor-text a {
+    background-color: #4070f4;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    padding: 15px 50px;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+.contact-infor-img {
+    width: 50%;
+}
+
+.contact-infor-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: 60px;
+}
+@media (max-width: 767.98px) { 
+    .contact-infor {
+        flex-direction: column-reverse;
+        margin: 0 25px;
+        align-items: center;
+    }
+    .contact-infor-text {
+        width: 100%;
+    }
+    .contact-infor-text p{
+        text-align: center;
+    }
+    .contact-infor-img {
+       width: 100%;
+    }
+    .contact-infor-img img {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}

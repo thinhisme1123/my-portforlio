@@ -1,0 +1,43 @@
+:root {
+    --header-height: 3rem;
+    --font-semi: 600;
+    --first-color: #4070f4;
+    --second-color: #0e2431;
+    --body-font: "Poppins", sans-serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 0.938rem;
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+.grid {
+    width: 1050px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(-20px); 
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+/* Visible state triggers the animation */
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0); /* Back to original position */
+}
+

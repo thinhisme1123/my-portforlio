@@ -1,0 +1,36 @@
+.footer-container {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+}
+.footer-section-container {
+    margin: auto;
+}
+.footer-item {
+    margin-bottom: 30px;
+}
+
+.footer-name h1{
+    font-size: 35px;
+    margin-top: 40px;
+    color: white;
+    font-weight: bold;
+}
+.footer-infor {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.footer-infor a{
+    background-color: transparent;
+    font-size: 13px;
+}
+.footer-infor_linkicon {
+    color: white;
+}
+.footer-copyright p {
+    color: white;
+    font-weight: 700;
+}
+

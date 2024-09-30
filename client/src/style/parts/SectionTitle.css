@@ -1,0 +1,25 @@
+.section-title {
+    color: #4070f4;
+    position: relative;
+    margin-bottom: var(--mb-4); 
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.section-title::after {
+    content: '';
+    height: 4px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70px;
+    background-color: #4070f4; 
+    position: absolute;
+    bottom: -10px; 
+}
+@media (max-width: 767.98px) { 
+    .section-title {
+        font-size: 25px;
+    }
+}
+
