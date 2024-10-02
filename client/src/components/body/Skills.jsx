@@ -42,7 +42,7 @@ function Skills() {
                     <div className="skills-infor-item col">
                         <div className="skill-infor-header">
                             <h2>Front End</h2>
-                            <p>I have been using JavaScript and its libraries, frameworks <strong>jQuery, React, Redux, Node</strong> for 4 years.</p>
+                            <p>I have been using JavaScript and its libraries, frameworks <strong>jQuery, React, Boostrap</strong> for 1.5 years.</p>
                         </div>
                         {/* Mapping skillData */}
                         {skillDataFE.map((skill, index) => (
@@ -57,7 +57,7 @@ function Skills() {
                     <div className="skills-infor-item col">
                         <div className="skill-infor-header">
                             <h2>Back End</h2>
-                            <p>I developed the projects during my studying by using <strong>Node.js, PHP, and Python</strong>.</p>
+                            <p>I developed the projects during my studying by using <strong>Node.js, PHP, MongoDB</strong>.</p>
                         </div>
                         {skillDataBE.map((skill, index) => (
                             <SkillsData
@@ -71,7 +71,7 @@ function Skills() {
                     <div className="skills-infor-item col">
                         <div className="skill-infor-header">
                             <h2>Other Skills</h2>
-                            <p>I have been using JavaScript and its libraries, frameworks <strong>jQuery, React, Redux, Node</strong> for 4 years.</p>
+                            <p>With proficiency in multiple programming languages, I have the versatility to tackle complex projects and adapt to new challenges with ease.</p>
                         </div>
                         {/* Mapping skillData */}
                         {otherSkills.map((skill, index) => (
@@ -85,8 +85,8 @@ function Skills() {
                     {/* Another section */}
                     <div className="skills-infor-item col">
                         <div className="skill-infor-header">
-                            <h2>Orther Tools</h2>
-                            <p>I developed the projects during my studying by using <strong>Node.js, PHP, and Python</strong>.</p>
+                            <h2>Other Tools</h2>
+                            <p>Throughout my learning journey, I've utilized essential tools like <strong>GitHub</strong> to collaborate and manage code effectively, ensuring that every project is streamlined and organized.</p>
                         </div>
                         {otherTools.map((skill, index) => (
                             <SkillsData

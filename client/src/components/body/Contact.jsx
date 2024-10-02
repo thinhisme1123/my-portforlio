@@ -29,7 +29,7 @@ function Contact() {
         e.preventDefault();
 
         try {
-            const response = await fetch('https://my-portfolio-backend-xi.vercel.app/api/send-email', {
+            const response = await fetch('https://portfolio-backend-drab.vercel.app/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
