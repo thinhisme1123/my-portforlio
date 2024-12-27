@@ -76,7 +76,6 @@ function Contact() {
     return (
         <>
             <div className="contact-seciton-container">
-                <ToastContainer toastClassName="custom-toast"/> {/* This renders the toast messages */}
                 <SectionTitle name="Contact" />
                 <div className="contact-infor-container">
                     <div className="contact-infor-item">

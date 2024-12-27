@@ -10,15 +10,15 @@ function Skills() {
 
     const skillDataFE = [
         { name: 'HTML', percentage: '90%', icon: faHtml5 },
-        { name: 'CSS', percentage: '85%', icon: faCss3Alt },
+        { name: 'CSS', percentage: '90%', icon: faCss3Alt },
         { name: 'JavaScript', percentage: '80%', icon: faJs },
         { name: 'Bootstrap', percentage: '75%', icon: faBootstrap },
         { name: 'jQuery', percentage: '70%', icon: faJs },
-        { name: 'React', percentage: '80%', icon: faReact },
+        { name: 'React', percentage: '75%', icon: faReact },
     ];
 
     const skillDataBE = [
-        { name: 'NodeJS', percentage: '85%', icon: faNodeJs },
+        { name: 'NodeJS', percentage: '75%', icon: faNodeJs },
         { name: 'PHP', percentage: '75%', icon: faPhp },
         { name: 'MongoDB', percentage: '75%', icon: faLeaf },
     ]

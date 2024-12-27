@@ -1,5 +1,5 @@
 import { useRef ,useEffect} from 'react'
-
+import { ToastContainer } from 'react-toastify';
 import Header from './components/partials/Header'
 import Footer from './components/partials/Footer'
 import Home from './components/body/Home'
@@ -38,6 +38,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <ToastContainer position="top-right" autoClose={3000} />
       <header id="header">
           <Header/>
       </header>
