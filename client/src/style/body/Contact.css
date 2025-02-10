@@ -56,3 +56,7 @@
 .custom-toast {
     margin-top: 20%; /* Adjust the margin as needed */
 }
+.button-link:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

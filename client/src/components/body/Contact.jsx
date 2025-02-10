@@ -15,6 +15,7 @@ function Contact() {
         email: '',
         message: ''
     });
+    const [isSending, setIsSending] = useState(false)
 
     // Handle form data changes
     const handleChange = (e) => {
@@ -27,7 +28,7 @@ function Contact() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        setIsSending(true)
         try {
             const response = await fetch('https://portfolio-backend-drab.vercel.app/api/send-email', {
                 method: 'POST',
@@ -47,6 +48,7 @@ function Contact() {
                     draggable: true,
                     progress: undefined,
                 });
+                setIsSending(false);
                 setFormData({ name: '', email: '', message: '' }); // Reset form after submission
             } else {
                 toast.error('Failed to send email. Please try again.', {
@@ -74,7 +76,7 @@ function Contact() {
     };
 
     return (
-        <>
+        <div>
             <div className="contact-seciton-container">
                 <SectionTitle name="Contact" />
                 <div className="contact-infor-container">
@@ -130,12 +132,18 @@ function Contact() {
                             />
                         </div>
                         <div className="contact-form-btn">
-                            <button className="button-link" type="submit">Send</button>
+                            <button
+                                className="button-link"
+                                type="submit"
+                                disabled={isSending}
+                            >
+                                {isSending ? "Sending..." : "Send"}
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

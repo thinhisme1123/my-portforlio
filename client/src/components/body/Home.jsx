@@ -1,13 +1,33 @@
-import ProfileImg from '/assets/img/profilelogo.png'
-import '../../style/body/Home.css'
-import '../../style/all/All.css'
+import React, { useState, useEffect } from 'react';
+import ProfileImg from '/assets/img/profilelogo.png';
+import '../../style/body/Home.css';
+import '../../style/all/All.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
-import ButtonLink from '../parts/Buttons'
+import ButtonLink from '../parts/Buttons';
 
 function Home() {
+    const [text, setText] = useState('');
+    const fullText = "Hi,\nI'm Thinh Tran\nFull Stack Software Developer";
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [showCursor, setShowCursor] = useState(true);
+    const typingSpeed = 100;
+
+    useEffect(() => {
+        if (currentIndex < fullText.length) {
+            const timeout = setTimeout(() => {
+                setText(fullText.slice(0, currentIndex + 1));
+                setCurrentIndex(currentIndex + 1);
+            }, typingSpeed);
+
+            return () => clearTimeout(timeout);
+        }
+    }, [currentIndex]);
+
+    const lines = text.split('\n');
+
     return (
-        <>
+        <div>
             <div className="grid home-container">
                 <div className="home-picture">
                     <img src={ProfileImg} alt="Profile" />
@@ -32,20 +52,36 @@ function Home() {
                 <div className="home-text">
                     <div className="home-text-intro mt-5">
                         <h1>
-                            Hi,
-                            <br />
-                            I'm <span>Thinh Tran </span> 
-                            <br />
-                            Full Stack Software Developer
+                            {lines.map((line, index) => {
+                                if (index === 1 && line.includes("Thinh Tran")) {
+                                    const parts = line.split("Thinh Tran");
+                                    return (
+                                        <React.Fragment key={index}>
+                                            {parts[0]}<span>Thinh Tran</span>{parts[1]}
+                                            {index === lines.length - 1 && currentIndex < fullText.length &&
+                                                <span className="typing-cursor">|</span>}
+                                            <br />
+                                        </React.Fragment>
+                                    );
+                                }
+                                return (
+                                    <React.Fragment key={index}>
+                                        {line}
+                                        {index === lines.length - 1 && currentIndex < fullText.length &&
+                                            <span className="typing-cursor">|</span>}
+                                        <br />
+                                    </React.Fragment>
+                                );
+                            })}
                         </h1>
                     </div>
                     <div className="home-text-button mt-5">
-                        <ButtonLink href='#contact' name='Contact'/>
+                        <ButtonLink href='#contact' name='Contact' />
                     </div>
                 </div>
             </div>
-        </>
-    )
+        </div>
+    );
 }
 
-export default Home
+export default Home;

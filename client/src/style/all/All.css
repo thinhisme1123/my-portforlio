@@ -18,6 +18,19 @@
     --z-tooltip: 10;
     --z-fixed: 100;
 }
+/* blinking cursor */
+.typing-cursor {
+    display: inline-block;
+    width: 2px;
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
 .grid {
     width: 1050px;
     max-width: 100%;
