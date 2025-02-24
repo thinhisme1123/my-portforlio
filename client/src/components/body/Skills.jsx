@@ -1,7 +1,7 @@
 import '../../style/body/Skills.css';
 import '../../style/all/All.css';
 
-import {faGithub,faPython,faJava,faReact, faNodeJs, faPhp, faHtml5, faCss3Alt, faJs, faBootstrap,faFlutter} from '@fortawesome/free-brands-svg-icons';
+import {faGithub,faPython,faJava,faReact, faNodeJs, faPhp, faHtml5, faCss3Alt, faJs, faBootstrap,faFlutter,faCss3, faSass} from '@fortawesome/free-brands-svg-icons';
 import { faLeaf,faC } from '@fortawesome/free-solid-svg-icons';
 import SectionTitle from '../parts/SectionTitle';
 import SkillsData from '../parts/SkillData';
@@ -13,6 +13,8 @@ function Skills() {
         { name: 'CSS', percentage: '90%', icon: faCss3Alt },
         { name: 'JavaScript', percentage: '80%', icon: faJs },
         { name: 'Bootstrap', percentage: '75%', icon: faBootstrap },
+        { name: 'Tailwind CSS', percentage: '60%', icon: faCss3 }, //
+        { name: 'SASS', percentage: '60%', icon: faSass }, //
         { name: 'jQuery', percentage: '70%', icon: faJs },
         { name: 'React', percentage: '75%', icon: faReact },
     ];
