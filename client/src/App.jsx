@@ -9,7 +9,7 @@ import Contact from './components/body/Contact'
 import Project from './components/body/Project'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Analytics } from "@vercel/analytics/react"
 function App() {
   const sectionsRef = useRef([]);
 
@@ -63,7 +63,7 @@ function App() {
       <footer id="footer">
           <Footer/>
       </footer>
-
+      <Analytics/>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import '../../style/body/Skills.css'
 
 function SkillsData({skillData}) {
     return (
-        <>
+        <div>
             <div className="skills-data">
                 <div className="skills-name">
                     <FontAwesomeIcon className='skills-icon' icon={skillData.icon} size="2x" />
@@ -17,7 +17,7 @@ function SkillsData({skillData}) {
 
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -1,8 +1,9 @@
 import '../../style/body/Skills.css';
 import '../../style/all/All.css';
 
-import {faGithub,faPython,faJava,faReact, faNodeJs, faPhp, faHtml5, faCss3Alt, faJs, faBootstrap,faFlutter,faCss3, faSass} from '@fortawesome/free-brands-svg-icons';
-import { faLeaf,faC } from '@fortawesome/free-solid-svg-icons';
+import {faGithub ,faGitlab,faPython,faJava,faReact, faNodeJs, faPhp, faHtml5, faCss3Alt, faJs, faBootstrap,faFlutter,faCss3, faSass,faAngular, faResolving} from '@fortawesome/free-brands-svg-icons';
+import { faLeaf,faC,faPeopleGroup ,faGraduationCap} from '@fortawesome/free-solid-svg-icons';
+
 import SectionTitle from '../parts/SectionTitle';
 import SkillsData from '../parts/SkillData';
 
@@ -12,11 +13,13 @@ function Skills() {
         { name: 'HTML', percentage: '90%', icon: faHtml5 },
         { name: 'CSS', percentage: '90%', icon: faCss3Alt },
         { name: 'JavaScript', percentage: '80%', icon: faJs },
+        { name: 'TypeScript', percentage: '70%', icon: faJs },
         { name: 'Bootstrap', percentage: '75%', icon: faBootstrap },
         { name: 'Tailwind CSS', percentage: '60%', icon: faCss3 }, //
         { name: 'SASS', percentage: '60%', icon: faSass }, //
         { name: 'jQuery', percentage: '70%', icon: faJs },
         { name: 'React', percentage: '75%', icon: faReact },
+        { name: 'Angular', percentage: '75%', icon: faAngular },
     ];
 
     const skillDataBE = [
@@ -30,14 +33,18 @@ function Skills() {
         { name: 'Java', percentage: '70%', icon: faJava },
         { name: 'Python', percentage: '70%', icon: faPython },
         { name: 'Flutter', percentage: '70%', icon: faFlutter },
+        { name: 'Problem Solving', percentage: '90%', icon: faResolving },
+        { name: 'Team Working', percentage: '90%', icon: faPeopleGroup },
+        { name: 'Self-Studying', percentage: '100%', icon: faGraduationCap },
     ]
 
     const otherTools = [
         { name: 'Github', percentage: '75%', icon: faGithub },
+        { name: 'GitLab', percentage: '75%', icon: faGitlab },
     ]
 
     return (
-        <>
+        <div>
             <div className="grid skills-seciton-container">
                 <SectionTitle name='Skills' />
                 <div className="row skills-infor-container">
@@ -99,7 +106,7 @@ function Skills() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

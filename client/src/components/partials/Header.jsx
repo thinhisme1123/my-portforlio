@@ -21,7 +21,7 @@ function Header() {
     };
 
     return (
-        <>
+        <div>
             <div className="grid header-container">
                 <div className="header-name">
                     <h3>Thinh Tran</h3>
@@ -45,7 +45,7 @@ function Header() {
                     <FontAwesomeIcon icon={faBars} />
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
