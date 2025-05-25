@@ -10,7 +10,7 @@ function ProjectItem({RepoData}) {
         return `${day}-${month}-${year}`;
       };
     return (
-        <>
+        <div>
             <a className='project-item-link' href={RepoData.html_url}> 
                 <hr className='hrdark' />
                 <div className="project-item">
@@ -27,7 +27,7 @@ function ProjectItem({RepoData}) {
                     </div>
                 </div>
             </a>
-        </>
+        </div>
     )
 }
 export default ProjectItem

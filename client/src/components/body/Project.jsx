@@ -24,7 +24,7 @@ function Project() {
     }, []);
 
     return(
-        <>
+        <div>
             <div className="project-section-container">
                 <SectionTitle name='Projects' />
                 <div className="project-container">
@@ -38,7 +38,7 @@ function Project() {
                     )}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
