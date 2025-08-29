@@ -10,7 +10,6 @@ function Home() {
     const [text, setText] = useState('');
     const fullText = "Hi,\nI'm Thinh Tran\nFull Stack Software Developer";
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [showCursor, setShowCursor] = useState(true);
     const typingSpeed = 100;
 
     useEffect(() => {

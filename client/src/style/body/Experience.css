@@ -1,0 +1,376 @@
+/* Experience Section Styles - Dynamic Timeline Version */
+
+.experience-container {
+  margin-top: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.experience-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 1rem;
+  top: 2rem;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #4070f4 0%, rgba(64, 112, 244, 0.3) 100%);
+}
+
+/* Enhanced Timeline Dot with Animation */
+.timeline-dot {
+  position: absolute;
+  left: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: rgba(64, 112, 244, 0.3);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px rgba(64, 112, 244, 0.1);
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* Active Timeline Dot */
+.timeline-dot.active {
+  background: #4070f4;
+  box-shadow: 
+    0 0 0 3px rgba(64, 112, 244, 0.3),
+    0 0 20px rgba(64, 112, 244, 0.4);
+  transform: scale(1.2);
+}
+
+/* Pulse Animation for Active Dot */
+.timeline-dot.active .dot-pulse {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 2px solid #4070f4;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  opacity: 0.6;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.experience-card {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 
+    0 20px 40px rgba(64, 112, 244, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(64, 112, 244, 0.1);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.7;
+}
+
+/* Active Experience Card */
+.experience-card.active {
+  opacity: 1;
+  transform: translateY(-8px);
+  box-shadow: 
+    0 30px 60px rgba(64, 112, 244, 0.2),
+    0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: rgba(64, 112, 244, 0.3);
+}
+
+.experience-card:hover {
+  opacity: 1;
+  transform: translateY(-5px);
+  box-shadow: 
+    0 30px 60px rgba(64, 112, 244, 0.15),
+    0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(64, 112, 244, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.experience-card.active .card-glow {
+  background: radial-gradient(circle, rgba(64, 112, 244, 0.08) 0%, transparent 70%);
+}
+
+.experience-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.company-logo {
+  flex-shrink: 0;
+}
+
+.logo-background {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #f8f9ff 0%, #e6ebff 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(64, 112, 244, 0.15);
+  border: 2px solid rgba(64, 112, 244, 0.1);
+  transition: all 0.3s ease;
+}
+
+.experience-card.active .logo-background {
+  box-shadow: 0 12px 30px rgba(64, 112, 244, 0.25);
+  border-color: rgba(64, 112, 244, 0.2);
+}
+
+.company-logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.experience-info {
+  flex: 1;
+}
+
+.position-badge {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.position-title {
+  background: linear-gradient(135deg, #4070f4 0%, #5b7ef5 100%);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(64, 112, 244, 0.3);
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.experience-card.active .position-title {
+  box-shadow: 0 6px 18px rgba(64, 112, 244, 0.4);
+  transform: translateY(-1px);
+}
+
+.company-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.experience-card.active .company-name {
+  color: #1a365d;
+}
+
+.duration-container {
+  margin: 0 4rem;
+}
+
+.duration-badge {
+  background: rgba(64, 112, 244, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(64, 112, 244, 0.2);
+  transition: all 0.3s ease;
+}
+
+.experience-card.active .duration-badge {
+  background: rgba(64, 112, 244, 0.15);
+  border-color: rgba(64, 112, 244, 0.3);
+}
+
+.duration {
+  color: #4070f4;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.duration-length {
+  color: #666;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.experience-description {
+  position: relative;
+  z-index: 1;
+}
+
+.description-header {
+  margin-bottom: 1.5rem;
+}
+
+.description-header h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(64, 112, 244, 0.2);
+  transition: border-color 0.3s ease;
+}
+
+.experience-card.active .description-header h5 {
+  border-bottom-color: rgba(64, 112, 244, 0.4);
+}
+
+.achievements-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(64, 112, 244, 0.02);
+  border-radius: 12px;
+  border-left: 3px solid #4070f4;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.experience-card.active .achievement-item {
+  opacity: 1;
+  background: rgba(64, 112, 244, 0.04);
+}
+
+.achievement-item:hover {
+  background: rgba(64, 112, 244, 0.05);
+  transform: translateX(5px);
+}
+
+.achievement-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.achievement-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* Scroll Progress Indicator */
+.timeline-progress {
+  position: absolute;
+  left: 1rem;
+  top: 2rem;
+  width: 2px;
+  background: #4070f4;
+  transition: height 0.1s ease;
+  z-index: 1;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .experience-container {
+    padding: 0 0.5rem;
+  }
+
+  .experience-timeline {
+    padding-left: 1rem;
+  }
+
+  .timeline-line {
+    left: 0.5rem;
+  }
+
+  .timeline-dot {
+    left: -0.25rem;
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .timeline-dot.active {
+    transform: scale(1.1);
+  }
+
+  .experience-card {
+    margin-left: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .logo-background {
+    width: 70px;
+    height: 70px;
+  }
+
+  .company-logo-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .position-title {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .company-name {
+    font-size: 1.2rem;
+  }
+
+  .achievement-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .achievement-item:hover {
+    transform: none;
+  }
+
+  .timeline-dot.active .dot-pulse {
+    display: none; /* Hide pulse on mobile for performance */
+  }
+}
