@@ -7,7 +7,6 @@
 .header-name {
     height: 100%;
     display: flex;
-
 }
 
 .header-name h3 {
@@ -65,7 +64,6 @@
     background-color: #4070f4;
     transform: scaleX(0);
     transition: transform .5s ease-in-out;
-    
 }
 
 .section-link:hover::before {

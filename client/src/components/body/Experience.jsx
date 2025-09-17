@@ -1,16 +1,50 @@
 import SectionTitle from "../parts/SectionTitle";
-import "../../style/body/Experience.css";
 import { useState, useEffect, useRef } from "react";
+import "../../style/body/Experience.css";
 
 export default function Experience() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const timelineRef = useRef(null);
   const experienceRefs = useRef([]);
 
+  // Add this if you want multiple experiences later
   const experiences = [
     {
       id: 1,
+      position: "FullStack Developer (ReactJS, NextJS, NodeJS)",
+      company: "Self-Employed",
+      duration: "January 2024 - Present",
+      durationLength: "Ongoing",
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%234070f4'/%3E%3Ctext x='50' y='58' font-family='Arial, sans-serif' font-size='36' font-weight='bold' text-anchor='middle' fill='white'%3EF%3C/text%3E%3C/svg%3E",
+      achievements: [
+        {
+          icon: "🎯",
+          text: "Successfully delivered 8+ custom websites for small businesses, achieving 100% client satisfaction and repeat business",
+        },
+        {
+          icon: "💼",
+          text: "Managed complete project lifecycle from client consultation to deployment, demonstrating strong project management skills",
+        },
+        {
+          icon: "⚡",
+          text: "Built high-performance, SEO-optimized websites using React.js, Next.js, and modern CSS frameworks like Tailwind CSS",
+        },
+        {
+          icon: "📱",
+          text: "Specialized in creating fully responsive, mobile-first designs that work seamlessly across all devices and browsers",
+        },
+        {
+          icon: "🚀",
+          text: "Implemented modern web technologies including animations, progressive web app features, and performance optimization techniques",
+        },
+        {
+          icon: "💬",
+          text: "Developed strong client communication skills, translating business requirements into technical solutions and providing ongoing support",
+        },
+      ],
+    },
+    {
+      id: 2,
       position: "Frontend Developer Intern",
       company: "COZWORK JOINT STOCK COMPANY",
       duration: "April 2025 - June 2025",
@@ -49,34 +83,36 @@ export default function Experience() {
     const handleScroll = () => {
       if (!timelineRef.current) return;
 
-      const timelineRect = timelineRef.current.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
+      let newActiveIndex = activeIndex;
 
-      // Calculate scroll progress (0 to 1)
-      const progress = Math.max(
-        0,
-        Math.min(
-          1,
-          (viewportHeight - timelineRect.top) /
-            (timelineRect.height + viewportHeight)
-        )
-      );
-      setScrollProgress(progress);
-
-      // Update active experience based on scroll
       experienceRefs.current.forEach((ref, index) => {
         if (!ref) return;
         const rect = ref.getBoundingClientRect();
-        const isInView =
-          rect.top < viewportHeight * 0.6 && rect.bottom > viewportHeight * 0.4;
-        if (isInView && activeIndex !== index) {
-          setActiveIndex(index);
+        const headerOffset = 64;
+        const screenCenter = viewportHeight / 2 + headerOffset;
+
+        const offset = Math.abs(rect.top - screenCenter);
+        if (
+          !experienceRefs.current[newActiveIndex] ||
+          offset <
+            Math.abs(
+              experienceRefs.current[newActiveIndex].getBoundingClientRect()
+                .top -
+                viewportHeight / 2
+            )
+        ) {
+          newActiveIndex = index;
         }
       });
+
+      if (newActiveIndex !== activeIndex) {
+        setActiveIndex(newActiveIndex);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial call
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [activeIndex]);
@@ -89,42 +125,20 @@ export default function Experience() {
         <div className="experience-container">
           <div className="experience-timeline" ref={timelineRef}>
             <div className="timeline-line"></div>
-            {/* Animated progress line that fills based on scroll */}
+
             <div
-              className="timeline-progress"
-              style={{
-                height: `${scrollProgress * 100}%`,
-                opacity: scrollProgress > 0 ? 1 : 0,
-              }}
-            ></div>
+              className="timeline-dot active"
+              style={{ top: `${2 + activeIndex * 10}rem` }}
+            >
+              <div className="dot-pulse"></div>
+            </div>
 
             {experiences.map((exp, index) => (
               <div
                 key={exp.id}
                 className="experience-item"
                 ref={(el) => (experienceRefs.current[index] = el)}
-                style={{
-                  // Animate items based on scroll progress
-                  transform: `translateY(${Math.max(
-                    0,
-                    50 - scrollProgress * 100
-                  )}px)`,
-                  opacity: Math.min(1, scrollProgress * 2),
-                }}
               >
-                <div
-                  className={`timeline-dot ${
-                    activeIndex === index ? "active" : ""
-                  }`}
-                  style={{
-                    top: `${2 + index * 10}rem`,
-                    // Scale dot based on progress
-                    transform: `scale(${0.8 + scrollProgress * 0.4})`,
-                  }}
-                >
-                  <div className="dot-pulse"></div>
-                </div>
-
                 <div
                   className={`experience-card ${
                     activeIndex === index ? "active" : ""
@@ -165,19 +179,7 @@ export default function Experience() {
                     </div>
                     <div className="achievements-grid">
                       {exp.achievements.map((achievement, i) => (
-                        <div
-                          key={i}
-                          className="achievement-item"
-                          style={{
-                            // Stagger animation for achievement items
-                            animationDelay: `${i * 0.1}s`,
-                            opacity: scrollProgress > 0.3 ? 1 : 0,
-                            transform: `translateX(${Math.max(
-                              0,
-                              30 - scrollProgress * 60
-                            )}px)`,
-                          }}
-                        >
+                        <div key={i} className="achievement-item">
                           <div className="achievement-icon">
                             {achievement.icon}
                           </div>
@@ -189,19 +191,6 @@ export default function Experience() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Optional: Progress indicator */}
-          <div className="scroll-progress-indicator">
-            <div className="progress-text">
-              Progress: {Math.round(scrollProgress * 100)}%
-            </div>
-            <div className="progress-bar">
-              <div
-                className="progress-fill"
-                style={{ width: `${scrollProgress * 100}%` }}
-              ></div>
-            </div>
           </div>
         </div>
       </div>
