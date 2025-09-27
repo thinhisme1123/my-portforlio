@@ -11,7 +11,7 @@ export default function Experience() {
   const experiences = [
     {
       id: 1,
-      position: "FullStack Developer (ReactJS, NextJS, NodeJS)",
+      position: "Freelancer FullStack Developer (ReactJS, NextJS, NodeJS)",
       company: "Self-Employed",
       duration: "January 2024 - Present",
       durationLength: "Ongoing",
