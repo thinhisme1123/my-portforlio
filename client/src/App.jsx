@@ -11,6 +11,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Analytics } from "@vercel/analytics/react";
 import Experience from "./components/body/Experience";
+import Certificate from "./components/body/Certificate";
 function App() {
   const sectionsRef = useRef([]);
 
@@ -79,13 +80,20 @@ function App() {
         </main>
         <div
           ref={(el) => (sectionsRef.current[4] = el)}
+          id="certifications"
+          className="fade-in-element"
+        >
+          <Certificate />
+        </div>
+        <div
+          ref={(el) => (sectionsRef.current[5] = el)}
           id="projects"
           className="fade-in-element"
         >
           <Project />
         </div>
         <div
-          ref={(el) => (sectionsRef.current[5] = el)}
+          ref={(el) => (sectionsRef.current[6] = el)}
           id="contact"
           className="fade-in-element"
         >

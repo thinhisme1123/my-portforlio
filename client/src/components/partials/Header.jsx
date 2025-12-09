@@ -9,7 +9,7 @@ function Header() {
     const [activeIndex, setActiveIndex] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const menuItems = ["Home", "About", "Skills", "Experience", "Projects", "Contact"];
+    const menuItems = ["Home", "About", "Skills", "Experience", "Certifications", "Projects", "Contact"];
 
     const setActiveIndexFunciton = (index) => {
         setActiveIndex(index)

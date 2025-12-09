@@ -11,6 +11,41 @@ export default function Experience() {
   const experiences = [
     {
       id: 1,
+      position: "Private English Tutor (Part-Time)",
+      mobilePosition: "English Tutor",
+      company: "Self-Employed",
+      duration: "August 2024 - Present",
+      durationLength: "Ongoing",
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%234070f4'/%3E%3Ctext x='50' y='58' font-family='Arial, sans-serif' font-size='36' font-weight='bold' text-anchor='middle' fill='white'%3EE%3C/text%3E%3C/svg%3E",
+      achievements: [
+        {
+          icon: "👨‍🏫",
+          text: "Teach English one-on-one to two students (elementary and secondary level) focusing on grammar, pronunciation, and speaking skills",
+        },
+        {
+          icon: "📚",
+          text: "Design personalized lesson plans tailored to each student's learning pace and goals, ensuring effective knowledge retention",
+        },
+        {
+          icon: "📊",
+          text: "Monitor progress and provide regular feedback to students and parents, demonstrating commitment to student success",
+        },
+        {
+          icon: "🎓",
+          text: "Previously tutored high school student during university studies (2022-2023), helping improve listening, speaking, and reading comprehension skills for exam preparation",
+        },
+        {
+          icon: "💡",
+          text: "Foster a supportive and positive learning environment to increase student confidence and motivation in English communication",
+        },
+        {
+          icon: "🗣️",
+          text: "Developed strong interpersonal and teaching skills through adapting methods to different age groups and learning styles",
+        },
+      ],
+    },
+    {
+      id: 2,
       position: "Freelancer FullStack Developer (ReactJS, NextJS, NodeJS)",
       company: "Self-Employed",
       duration: "January 2024 - Present",
@@ -44,7 +79,7 @@ export default function Experience() {
       ],
     },
     {
-      id: 2,
+      id: 3,
       position: "Frontend Developer Intern",
       company: "COZWORK JOINT STOCK COMPANY",
       duration: "April 2025 - June 2025",
