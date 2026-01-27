@@ -82,9 +82,9 @@ export default function Experience() {
       id: 3,
       position: "Frontend Developer Intern",
       company: "COZWORK JOINT STOCK COMPANY",
-      duration: "April 2025 - June 2025",
+      duration: "July 2025 - September 2025",
       durationLength: "3 months",
-      logo: "https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY3Mzk4MiwicHVyIjoiYmxvYl9pZCJ9fQ==--1d67ea063cb01d9e95b781054ec8331e634f3f12/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e1d036817a0840c585f202e70291f5cdd058753d/coz-logo-color-1.png",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDxMJzc1DA4i32vUOKtDCE88c3vVFWWHKhzQ&s",
       achievements: [
         {
           icon: "📂",
