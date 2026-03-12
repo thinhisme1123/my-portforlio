@@ -82,13 +82,13 @@ export default function Experience() {
       id: 3,
       position: "Frontend Developer Intern",
       company: "COZWORK JOINT STOCK COMPANY",
-      duration: "July 2025 - September 2025",
+      duration: "April 2025 - June 2025",
       durationLength: "3 months",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDxMJzc1DA4i32vUOKtDCE88c3vVFWWHKhzQ&s",
       achievements: [
         {
           icon: "📂",
-          text: "Learned and applied Clean Architecture and CQRS pattern to structure production-level applications",
+          text: "Learned and applied Clean Architecture and CQRS patternưerqwerqwerqwer to structure production-level applications",
         },
         {
           icon: "⚛️",
@@ -112,6 +112,55 @@ export default function Experience() {
         },
       ],
     },
+    {
+      id: 4,
+      position: "Frontend Developer (Probation → Official)",
+      company: "COZWORK JOINT STOCK COMPANY",
+      duration: "July 2025 - November 2025",
+      durationLength: "4 months",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDxMJzc1DA4i32vUOKtDCE88c3vVFWWHKhzQ&s",
+      stack: [
+        "ReactJS",
+        "TypeScript",
+        "WebSocket",
+        "REST API",
+        "TailwindCSS",
+        "Git",
+        "Clean Architecture",
+        "CQRS",
+        "Agile / Scrum"
+      ],
+      achievements: [
+        {
+          icon: "💬",
+          text: "Developed key features for a real-time chat application including message sending, editing, and replying"
+        },
+        {
+          icon: "⚡",
+          text: "Integrated real-time communication using WebSocket to support instant messaging between users"
+        },
+        {
+          icon: "🏗️",
+          text: "Structured the frontend codebase using Clean Architecture to ensure scalability and maintainability"
+        },
+        {
+          icon: "🔗",
+          text: "Collaborated with backend engineers to integrate REST APIs and synchronize real-time chat data"
+        },
+        {
+          icon: "🧪",
+          text: "Improved UI stability by debugging complex state management and asynchronous data flows"
+        },
+        {
+          icon: "🚀",
+          text: "Delivered production-ready features under mentor guidance while progressively taking ownership of development tasks"
+        },
+        {
+          icon: "📊",
+          text: "Participated in Agile/Scrum development cycle including sprint planning, daily standups, and feature reviews"
+        }
+      ]
+    }
   ];
 
   useEffect(() => {
@@ -131,11 +180,11 @@ export default function Experience() {
         if (
           !experienceRefs.current[newActiveIndex] ||
           offset <
-            Math.abs(
-              experienceRefs.current[newActiveIndex].getBoundingClientRect()
-                .top -
-                viewportHeight / 2
-            )
+          Math.abs(
+            experienceRefs.current[newActiveIndex].getBoundingClientRect()
+              .top -
+            viewportHeight / 2
+          )
         ) {
           newActiveIndex = index;
         }
@@ -175,9 +224,8 @@ export default function Experience() {
                 ref={(el) => (experienceRefs.current[index] = el)}
               >
                 <div
-                  className={`experience-card ${
-                    activeIndex === index ? "active" : ""
-                  }`}
+                  className={`experience-card ${activeIndex === index ? "active" : ""
+                    }`}
                 >
                   <div className="card-glow"></div>
 
