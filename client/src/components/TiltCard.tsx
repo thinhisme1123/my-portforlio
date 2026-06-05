@@ -40,6 +40,7 @@ export default function TiltCard({
   );
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches) return;
     const rect = e.currentTarget.getBoundingClientRect();
     const xPct = (e.clientX - rect.left) / rect.width - 0.5;
     const yPct = (e.clientY - rect.top) / rect.height - 0.5;
@@ -48,6 +49,7 @@ export default function TiltCard({
   };
 
   const handleMouseLeave = () => {
+    if (typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches) return;
     x.set(0);
     y.set(0);
   };

@@ -62,9 +62,9 @@ const projects = [
     title: "Portfolio Website",
     description: "Personal portfolio website with interactive 3D elements, modern design aesthetics, and high performance.",
     tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
-    demoUrl: "#",
-    githubUrl: "#",
-    imageUrl: "https://placehold.co/600x400/1e293b/ffffff?text=Portfolio+Website",
+    demoUrl: "https://www.thinhtran1505.space",
+    githubUrl: "https://github.com/thinhisme1123/my-portforlio",
+    imageUrl: "/assets/projects/portfolio.png",
     color: "from-orange-500 to-red-500",
   }
 ];
@@ -73,7 +73,7 @@ function ProjectTiltCard({ project }: { project: typeof projects[0] }) {
   return (
     <TiltCard
       intensity={17.5}
-      className="relative w-full h-[450px] rounded-2xl bg-white/5 border border-white/10 p-6 flex flex-col justify-between group hover:border-white/20 transition-colors"
+      className="relative w-full h-auto min-h-full pb-6 rounded-2xl bg-white/5 border border-white/10 p-6 flex flex-col justify-between group hover:border-white/20 transition-colors"
     >
       <div
         style={{ transform: "translateZ(75px)" }}
@@ -102,11 +102,11 @@ function ProjectTiltCard({ project }: { project: typeof projects[0] }) {
         </div>
       </div>
 
-      <div style={{ transform: "translateZ(50px)" }} className="relative z-10 flex gap-4 mt-4">
-        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2 bg-white text-black rounded-lg font-medium hover:bg-gray-200 transition-colors">
+      <div style={{ transform: "translateZ(50px)" }} className="relative z-10 flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4">
+        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 py-2 bg-white text-black rounded-lg font-medium hover:bg-gray-200 transition-colors">
           <ExternalLink size={16} /> Live Demo
         </a>
-        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20 transition-colors">
+        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 py-2 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20 transition-colors">
           <FaGithub size={16} /> Source
         </a>
       </div>

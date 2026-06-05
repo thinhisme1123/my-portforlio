@@ -93,7 +93,7 @@ function TimelineItem({ exp, isActive, onVisible }: any) {
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ margin: "-40% 0px -40% 0px", amount: "some" }}
+      viewport={{ once: true, amount: 0.1, margin: "0px 0px -50px 0px" }}
       onViewportEnter={onVisible}
       className={cn("relative pl-12 md:pl-24 transition-all duration-500", isActive ? "opacity-100" : "opacity-40 hover:opacity-70")}
     >
