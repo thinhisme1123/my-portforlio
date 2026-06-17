@@ -1,0 +1,105 @@
+{
+  "Navbar": {
+    "about": "Giới Thiệu",
+    "skills": "Kỹ Năng",
+    "experience": "Kinh Nghiệm",
+    "projects": "Dự Án",
+    "contact": "Liên Hệ"
+  },
+  "Hero": {
+    "role": "Lập Trình Viên Full Stack",
+    "downloadResume": "Tải CV",
+    "viewWork": "Xem Dự Án"
+  },
+  "About": {
+    "sectionTitle": "Về Tôi",
+    "greeting": "Chào bạn, tôi là Thịnh.",
+    "bio1": "Tốt nghiệp Đại học Tôn Đức Thắng (TDTU), tôi có niềm đam mê mãnh liệt với lập trình và luôn tìm kiếm cơ hội để học hỏi cũng như tạo ra các giải pháp sáng tạo.",
+    "bio2": "Thông qua nhiều dự án và công việc bán thời gian với vai trò Web Developer, tôi đã tích lũy được kinh nghiệm thực tế trong ngành công nghệ tại Việt Nam. Mục tiêu của tôi là đóng góp vào sự thành công của những người làm việc cùng, đồng thời không ngừng mở rộng kỹ năng và kiến thức để phát triển những ứng dụng hữu ích và hiệu quả hơn.",
+    "educationTitle": "Học Vấn",
+    "educationName": "Đại học Tôn Đức Thắng (TDTU)",
+    "locationTitle": "Địa Điểm",
+    "locationValue": "TP. Hồ Chí Minh, Việt Nam"
+  },
+  "Experience": {
+    "sectionTitle": "Kinh Nghiệm",
+    "items": [
+      {
+        "position": "Frontend Developer",
+        "company": "CÔNG TY CỔ PHẦN COZWORK",
+        "duration": "Tháng 7, 2025 - Tháng 11, 2025",
+        "achievements": [
+          "Phát triển các tính năng chính cho ứng dụng trò chuyện thời gian thực",
+          "Tích hợp giao tiếp thời gian thực sử dụng WebSocket",
+          "Cấu trúc mã nguồn sử dụng Clean Architecture và CQRS"
+        ]
+      },
+      {
+        "position": "Thực tập sinh Frontend Developer",
+        "company": "CÔNG TY CỔ PHẦN COZWORK",
+        "duration": "Tháng 4, 2025 - Tháng 6, 2025",
+        "achievements": [
+          "Học và áp dụng Clean Architecture và CQRS",
+          "Tham gia phát triển front-end sử dụng ReactJS và Angular",
+          "Viết mã sạch, dễ bảo trì sử dụng TypeScript"
+        ]
+      },
+      {
+        "position": "Gia sư Tiếng Anh (Bán thời gian)",
+        "company": "Tự Do",
+        "duration": "Tháng 8, 2024 - Hiện tại",
+        "achievements": [
+          "Dạy Tiếng Anh một kèm một cho học sinh tiểu học và trung học cơ sở",
+          "Thiết kế giáo án cá nhân hóa",
+          "Theo dõi tiến độ và cung cấp phản hồi thường xuyên"
+        ]
+      },
+      {
+        "position": "FullStack Developer Tự Do",
+        "company": "Tự Do",
+        "duration": "Tháng 1, 2024 - Hiện tại",
+        "achievements": [
+          "Bàn giao hơn 8 trang web tùy chỉnh cho các doanh nghiệp nhỏ",
+          "Xây dựng trang web hiệu suất cao, tối ưu SEO sử dụng React, Next.js và Tailwind CSS",
+          "Triển khai thiết kế đáp ứng ưu tiên thiết bị di động"
+        ]
+      }
+    ]
+  },
+  "Projects": {
+    "sectionTitle": "Dự Án Nổi Bật",
+    "viewAll": "Xem tất cả Kho lưu trữ GitHub",
+    "liveDemo": "Xem Trực Tiếp",
+    "source": "Mã Nguồn",
+    "items": {
+      "1": {
+        "description": "Một hệ thống đặt lịch và quản lý spa toàn diện, bao gồm đặt lịch người dùng, bảng điều khiển quản trị và thông báo thời gian thực."
+      },
+      "2": {
+        "description": "Ứng dụng nhắn tin tức thì hỗ trợ trò chuyện một kèm một và nhóm, chia sẻ phương tiện, và biên nhận đã đọc sử dụng WebSockets."
+      },
+      "3": {
+        "description": "Một nền tảng phát trực tuyến phim hiện đại với giao diện điện ảnh và phát video thông minh. Tích hợp tự động cập nhật API."
+      },
+      "4": {
+        "description": "Nền tảng thương mại điện tử giày thể thao full-stack với quản lý sản phẩm, chức năng giỏ hàng, và trải nghiệm người dùng đáp ứng."
+      },
+      "5": {
+        "description": "Trang web doanh nghiệp giới thiệu sản phẩm, thông tin công ty, và dịch vụ với thiết kế gọn gàng và đáp ứng."
+      },
+      "6": {
+        "description": "Trang web danh mục cá nhân với các yếu tố 3D tương tác, tính thẩm mỹ thiết kế hiện đại, và hiệu suất cao."
+      }
+    }
+  },
+  "Skills": {
+    "sectionTitle": "Công Nghệ Sử Dụng"
+  },
+  "Footer": {
+    "letsWork": "Hãy cùng",
+    "together": "hợp tác",
+    "description": "Tôi đang tìm kiếm cơ hội mới. Dù bạn có câu hỏi hay chỉ muốn chào, tôi sẽ cố gắng phản hồi sớm nhất!",
+    "sayHello": "Liên Hệ Ngay",
+    "rights": "Đã đăng ký bản quyền."
+  }
+}

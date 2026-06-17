@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { 
   SiReact, 
   SiNextdotjs, 
@@ -42,6 +43,8 @@ const skills = [
 ];
 
 export default function SkillsMarquee() {
+  const t = useTranslations("Skills");
+
   return (
     <section id="skills" className="py-24 overflow-hidden relative">
       <div className="max-w-6xl mx-auto px-4 md:px-8 mb-12">
@@ -51,7 +54,7 @@ export default function SkillsMarquee() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center">Tech Stack</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center">{t("sectionTitle")}</h2>
           <div className="w-20 h-1 bg-purple-500 rounded-full mx-auto glow-purple"></div>
         </motion.div>
       </div>

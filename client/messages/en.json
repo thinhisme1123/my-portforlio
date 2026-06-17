@@ -1,0 +1,105 @@
+{
+  "Navbar": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "role": "Full Stack Developer",
+    "downloadResume": "Download Resume",
+    "viewWork": "View Work"
+  },
+  "About": {
+    "sectionTitle": "About Me",
+    "greeting": "Hi, I'm Thinh.",
+    "bio1": "Graduated from Ton Duc Thang University (TDTU), I have a strong enthusiasm for programming and continuously seek out opportunities to learn and create innovative solutions.",
+    "bio2": "Through various projects and part-time jobs as a Web Developer, I've gained hands-on experience in Vietnam's tech industry. My goal is to contribute to the success of those I work with while further expanding my skills and knowledge to develop more useful, efficient applications.",
+    "educationTitle": "Education",
+    "educationName": "Ton Duc Thang University (TDTU)",
+    "locationTitle": "Location",
+    "locationValue": "Ho Chi Minh City, Vietnam"
+  },
+  "Experience": {
+    "sectionTitle": "Experience",
+    "items": [
+      {
+        "position": "Frontend Developer",
+        "company": "COZWORK JOINT STOCK COMPANY",
+        "duration": "July 2025 - November 2025",
+        "achievements": [
+          "Developed key features for a real-time chat application",
+          "Integrated real-time communication using WebSocket",
+          "Structured codebase using Clean Architecture and CQRS"
+        ]
+      },
+      {
+        "position": "Frontend Developer Intern",
+        "company": "COZWORK JOINT STOCK COMPANY",
+        "duration": "April 2025 - June 2025",
+        "achievements": [
+          "Learned and applied Clean Architecture and CQRS",
+          "Participated in front-end development using ReactJS and Angular",
+          "Wrote clean, maintainable code using TypeScript"
+        ]
+      },
+      {
+        "position": "Private English Tutor (Part-Time)",
+        "company": "Self-Employed",
+        "duration": "August 2024 - Present",
+        "achievements": [
+          "Teach English one-on-one to elementary and secondary students",
+          "Design personalized lesson plans",
+          "Monitor progress and provide regular feedback"
+        ]
+      },
+      {
+        "position": "Freelance FullStack Developer",
+        "company": "Self-Employed",
+        "duration": "January 2024 - Present",
+        "achievements": [
+          "Delivered 8+ custom websites for small businesses",
+          "Built high-performance, SEO-optimized websites using React, Next.js, and Tailwind CSS",
+          "Implemented responsive mobile-first designs"
+        ]
+      }
+    ]
+  },
+  "Projects": {
+    "sectionTitle": "Featured Projects",
+    "viewAll": "View all GitHub Repositories",
+    "liveDemo": "Live Demo",
+    "source": "Source",
+    "items": {
+      "1": {
+        "description": "A comprehensive booking and management system for a spa, featuring user appointments, admin dashboard, and real-time notifications."
+      },
+      "2": {
+        "description": "Instant messaging application supporting one-on-one and group chats, media sharing, and read receipts using WebSockets."
+      },
+      "3": {
+        "description": "A modern movie streaming platform with a cinematic UI and smart video playback. Features auto-updating API integration."
+      },
+      "4": {
+        "description": "Full-stack sneaker e-commerce platform with product management, cart functionality, and responsive user experience."
+      },
+      "5": {
+        "description": "Business website showcasing products, company information, and services with a clean and responsive design."
+      },
+      "6": {
+        "description": "Personal portfolio website with interactive 3D elements, modern design aesthetics, and high performance."
+      }
+    }
+  },
+  "Skills": {
+    "sectionTitle": "Tech Stack"
+  },
+  "Footer": {
+    "letsWork": "Let's work",
+    "together": "together",
+    "description": "I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+    "sayHello": "Say Hello",
+    "rights": "All rights reserved."
+  }
+}

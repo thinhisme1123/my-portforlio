@@ -1,60 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Briefcase, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import TiltCard from "@/components/TiltCard";
 
-const experiences = [
-  {
-    id: 1,
-    position: "Frontend Developer",
-    company: "COZWORK JOINT STOCK COMPANY",
-    duration: "July 2025 - November 2025",
-    achievements: [
-      "Developed key features for a real-time chat application",
-      "Integrated real-time communication using WebSocket",
-      "Structured codebase using Clean Architecture and CQRS",
-    ]
-  },
-  {
-    id: 2,
-    position: "Frontend Developer Intern",
-    company: "COZWORK JOINT STOCK COMPANY",
-    duration: "April 2025 - June 2025",
-    achievements: [
-      "Learned and applied Clean Architecture and CQRS",
-      "Participated in front-end development using ReactJS and Angular",
-      "Wrote clean, maintainable code using TypeScript",
-    ]
-  },
-  {
-    id: 3,
-    position: "Private English Tutor (Part-Time)",
-    company: "Self-Employed",
-    duration: "August 2024 - Present",
-    achievements: [
-      "Teach English one-on-one to elementary and secondary students",
-      "Design personalized lesson plans",
-      "Monitor progress and provide regular feedback",
-    ]
-  },
-  {
-    id: 4,
-    position: "Freelance FullStack Developer",
-    company: "Self-Employed",
-    duration: "January 2024 - Present",
-    achievements: [
-      "Delivered 8+ custom websites for small businesses",
-      "Built high-performance, SEO-optimized websites using React, Next.js, and Tailwind CSS",
-      "Implemented responsive mobile-first designs",
-    ]
-  }
-];
-
 export default function ExperienceTimeline() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const t = useTranslations("Experience");
+  
+  const experiences = t.raw("items") as Array<{
+    position: string;
+    company: string;
+    duration: string;
+    achievements: string[];
+  }>;
 
   return (
     <section id="experience" className="py-24 px-4 md:px-8 max-w-4xl mx-auto relative">
@@ -65,7 +27,7 @@ export default function ExperienceTimeline() {
         transition={{ duration: 0.5 }}
         className="mb-16 text-center"
       >
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">Experience</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-4">{t("sectionTitle")}</h2>
         <div className="w-20 h-1 bg-cyan-500 rounded-full mx-auto glow-cyan"></div>
       </motion.div>
 
@@ -76,7 +38,7 @@ export default function ExperienceTimeline() {
         <div className="flex flex-col gap-12" style={{ perspective: "1000px" }}>
           {experiences.map((exp, index) => (
             <TimelineItem
-              key={exp.id}
+              key={index}
               exp={exp}
               isActive={activeIndex === index}
               onVisible={() => setActiveIndex(index)}
@@ -89,12 +51,24 @@ export default function ExperienceTimeline() {
 }
 
 function TimelineItem({ exp, isActive, onVisible }: any) {
+  const ref = useRef(null);
+  
+  // Track middle 20% of the screen (40% top margin, 40% bottom margin)
+  // This ensures the active state only triggers when the user is actually reading the card
+  const isCenterInView = useInView(ref, { margin: "-40% 0px -40% 0px", amount: "some" });
+
+  useEffect(() => {
+    if (isCenterInView) {
+      onVisible();
+    }
+  }, [isCenterInView, onVisible]);
+
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.1, margin: "0px 0px -50px 0px" }}
-      onViewportEnter={onVisible}
       className={cn("relative pl-12 md:pl-24 transition-all duration-500", isActive ? "opacity-100" : "opacity-40 hover:opacity-70")}
     >
       {/* Node */}

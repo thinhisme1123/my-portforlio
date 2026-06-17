@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { GraduationCap, MapPin, Sparkles } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import TiltCard from "@/components/TiltCard";
 
 export default function AboutBento() {
+  const t = useTranslations("About");
   return (
     <section id="about" className="py-24 px-4 md:px-8 max-w-6xl mx-auto">
       <motion.div
@@ -15,7 +17,7 @@ export default function AboutBento() {
         transition={{ duration: 0.5 }}
         className="mb-12"
       >
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">About Me</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-4">{t("sectionTitle")}</h2>
         <div className="w-20 h-1 bg-cyan-500 rounded-full glow-cyan"></div>
       </motion.div>
 
@@ -36,12 +38,12 @@ export default function AboutBento() {
             <div className="relative z-10 flex flex-col h-full justify-between">
               <div>
                 <Sparkles className="w-8 h-8 text-cyan-400 mb-6" />
-                <h3 className="text-2xl font-bold mb-4">Hi, I'm Thinh.</h3>
+                <h3 className="text-2xl font-bold mb-4">{t("greeting")}</h3>
                 <p className="text-gray-300 leading-relaxed text-lg mb-4">
-                  Graduated from Ton Duc Thang University (TDTU), I have a strong enthusiasm for programming and continuously seek out opportunities to learn and create innovative solutions.
+                  {t("bio1")}
                 </p>
                 <p className="text-gray-300 leading-relaxed text-lg">
-                  Through various projects and part-time jobs as a Web Developer, I've gained hands-on experience in Vietnam's tech industry. My goal is to contribute to the success of those I work with while further expanding my skills and knowledge to develop more useful, efficient applications.
+                  {t("bio2")}
                 </p>
               </div>
             </div>
@@ -84,8 +86,8 @@ export default function AboutBento() {
           >
             <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <GraduationCap className="w-12 h-12 text-emerald-400 mb-4 relative z-10" />
-            <h4 className="text-xl font-bold mb-2 relative z-10">Education</h4>
-            <p className="text-gray-400 relative z-10">Ton Duc Thang University (TDTU)</p>
+            <h4 className="text-xl font-bold mb-2 relative z-10">{t("educationTitle")}</h4>
+            <p className="text-gray-400 relative z-10">{t("educationName")}</p>
           </TiltCard>
         </motion.div>
 
@@ -103,8 +105,8 @@ export default function AboutBento() {
           >
             <div className="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <MapPin className="w-12 h-12 text-purple-400 mb-4 relative z-10" />
-            <h4 className="text-xl font-bold mb-2 relative z-10">Location</h4>
-            <p className="text-gray-400 relative z-10">Ho Chi Minh City, Vietnam</p>
+            <h4 className="text-xl font-bold mb-2 relative z-10">{t("locationTitle")}</h4>
+            <p className="text-gray-400 relative z-10">{t("locationValue")}</p>
           </TiltCard>
         </motion.div>
       </div>

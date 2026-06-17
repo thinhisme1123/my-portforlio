@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 import TiltCard from "@/components/TiltCard";
 import Image from "next/image";
 
@@ -70,6 +71,8 @@ const projects = [
 ];
 
 function ProjectTiltCard({ project }: { project: typeof projects[0] }) {
+  const t = useTranslations("Projects");
+  
   return (
     <TiltCard
       intensity={17.5}
@@ -92,7 +95,7 @@ function ProjectTiltCard({ project }: { project: typeof projects[0] }) {
           <div className="absolute inset-0 bg-black/20 group-hover/image:bg-black/0 transition-colors duration-500" />
         </div>
         <h3 className="text-2xl font-bold mb-2 text-white">{project.title}</h3>
-        <p className="text-gray-400 text-sm mb-4 line-clamp-3">{project.description}</p>
+        <p className="text-gray-400 text-sm mb-4 line-clamp-3">{t(`items.${project.id}.description`)}</p>
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag: string, i: number) => (
             <span key={i} className="text-xs font-medium px-2 py-1 bg-white/10 rounded-md text-gray-300">
@@ -104,10 +107,10 @@ function ProjectTiltCard({ project }: { project: typeof projects[0] }) {
 
       <div style={{ transform: "translateZ(50px)" }} className="relative z-10 flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4">
         <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 py-2 bg-white text-black rounded-lg font-medium hover:bg-gray-200 transition-colors">
-          <ExternalLink size={16} /> Live Demo
+          <ExternalLink size={16} /> {t("liveDemo")}
         </a>
         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 py-2 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20 transition-colors">
-          <FaGithub size={16} /> Source
+          <FaGithub size={16} /> {t("source")}
         </a>
       </div>
     </TiltCard>
@@ -115,6 +118,8 @@ function ProjectTiltCard({ project }: { project: typeof projects[0] }) {
 }
 
 export default function FeaturedProjects() {
+  const t = useTranslations("Projects");
+
   return (
     <section id="projects" className="py-24 px-4 md:px-8 max-w-6xl mx-auto">
       <motion.div
@@ -124,7 +129,7 @@ export default function FeaturedProjects() {
         transition={{ duration: 0.5 }}
         className="mb-16 text-center"
       >
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-4">{t("sectionTitle")}</h2>
         <div className="w-20 h-1 bg-emerald-500 rounded-full mx-auto glow-emerald"></div>
       </motion.div>
 
@@ -150,7 +155,7 @@ export default function FeaturedProjects() {
           className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-white transition-all duration-300 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 hover:border-white/20"
         >
           <FaGithub size={18} className="mr-2" />
-          View all GitHub Repositories
+          {t("viewAll")}
         </a>
       </div>
     </section>

@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
   return (
     <footer id="contact" className="relative border-t border-white/10 bg-black/50 overflow-hidden pt-24 pb-12 mt-24">
       {/* Background Glow */}
@@ -19,7 +21,7 @@ export default function Footer() {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-bold tracking-tighter mb-6"
           >
-            Let's work <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">together</span>
+            {t("letsWork")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">{t("together")}</span>
           </motion.h2>
           
           <motion.p
@@ -29,7 +31,7 @@ export default function Footer() {
             transition={{ delay: 0.1 }}
             className="text-gray-400 text-lg md:text-xl max-w-2xl mb-10"
           >
-            I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            {t("description")}
           </motion.p>
 
           <motion.a
@@ -40,14 +42,14 @@ export default function Footer() {
             href="mailto:thinhisme1123@gmail.com"
             className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-black transition-all duration-300 bg-white rounded-full hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
           >
-            <span>Say Hello</span>
+            <span>{t("sayHello")}</span>
             <ArrowUpRight size={20} className="ml-2 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
           </motion.a>
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10 gap-6">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Thinh Tran. All rights reserved.
+            © {new Date().getFullYear()} Thinh Tran. {t("rights")}
           </p>
 
           <div className="flex items-center gap-6">

@@ -4,13 +4,16 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Download, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("Hero");
   const [text, setText] = useState("");
-  const fullText = "Full Stack Developer";
+  const fullText = t("role");
   
   useEffect(() => {
     let i = 0;
+    setText(""); // Reset text when language changes
     const interval = setInterval(() => {
       setText(fullText.slice(0, i + 1));
       i++;
@@ -19,7 +22,7 @@ export default function Hero() {
       }
     }, 100);
     return () => clearInterval(interval);
-  }, []);
+  }, [fullText]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
@@ -95,7 +98,7 @@ export default function Hero() {
             className="group relative inline-flex items-center justify-center px-8 py-3 text-sm font-medium text-white transition-all duration-300 bg-black border border-cyan-500/50 rounded-full hover:glow-cyan hover:border-cyan-400 overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Download Resume
+              {t("downloadResume")}
               <Download size={16} className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
             </span>
             <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -105,7 +108,7 @@ export default function Hero() {
             href="#projects"
             className="group inline-flex items-center justify-center px-8 py-3 text-sm font-medium text-gray-300 transition-colors duration-300 rounded-full hover:text-white hover:bg-white/5"
           >
-            View Work
+            {t("viewWork")}
             <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
           </a>
         </motion.div>
