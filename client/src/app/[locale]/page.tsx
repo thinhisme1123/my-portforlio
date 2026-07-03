@@ -4,6 +4,7 @@ import AboutBento from "@/components/AboutBento";
 import SkillsMarquee from "@/components/SkillsMarquee";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import FeaturedProjects from "@/components/FeaturedProjects";
+import Certifications from "@/components/Certifications";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <AboutBento />
         <SkillsMarquee />
         <ExperienceTimeline />
+        <Certifications />
         <FeaturedProjects />
         <Footer />
       </div>

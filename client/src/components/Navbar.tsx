@@ -27,6 +27,9 @@ export default function Navbar() {
         <a href="#projects" className="text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors">
           {t("projects")}
         </a>
+        <a href="#certifications" className="text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors hidden sm:block">
+          {t("certifications")}
+        </a>
       </div>
 
       <div className="flex items-center gap-4">

@@ -4,6 +4,7 @@
     "skills": "Kỹ Năng",
     "experience": "Kinh Nghiệm",
     "projects": "Dự Án",
+    "certifications": "Chứng Chỉ",
     "contact": "Liên Hệ"
   },
   "Hero": {
@@ -94,6 +95,17 @@
   },
   "Skills": {
     "sectionTitle": "Công Nghệ Sử Dụng"
+  },
+  "Certifications": {
+    "sectionTitle": "Chứng Chỉ",
+    "showCredential": "Xem chứng chỉ",
+    "issuedPrefix": "Cấp",
+    "verified": "Đã xác minh",
+    "items": [
+      { "issuedDate": "Tháng 5, 2024" },
+      { "issuedDate": "Tháng 3, 2024" },
+      { "issuedDate": "Tháng 7, 2024" }
+    ]
   },
   "Footer": {
     "letsWork": "Hãy cùng",

@@ -4,6 +4,7 @@
     "skills": "Skills",
     "experience": "Experience",
     "projects": "Projects",
+    "certifications": "Certifications",
     "contact": "Contact"
   },
   "Hero": {
@@ -94,6 +95,17 @@
   },
   "Skills": {
     "sectionTitle": "Tech Stack"
+  },
+  "Certifications": {
+    "sectionTitle": "Certifications",
+    "showCredential": "Show credential",
+    "issuedPrefix": "Issued",
+    "verified": "Verified",
+    "items": [
+      { "issuedDate": "May 2024" },
+      { "issuedDate": "March 2024" },
+      { "issuedDate": "July 2024" }
+    ]
   },
   "Footer": {
     "letsWork": "Let's work",
